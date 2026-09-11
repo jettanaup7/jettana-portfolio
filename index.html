@@ -127,14 +127,14 @@
                 </div>
             </div>
 
-            <!-- Profile Overview Card (Large & Clear Profile Photo) -->
+            <!-- Profile Overview Card (เพิ่ม object-top แก้รูปหัวขาด) -->
             <div class="lg:col-span-5">
                 <div class="brand-card p-8 rounded-none h-full flex flex-col justify-between border-l-4 border-l-brand-volt">
                     <div class="space-y-6">
-                        <!-- Profile Image Section -->
                         <div class="flex flex-col sm:flex-row items-center gap-6 pb-6 border-b border-brand-border">
                             <div class="relative group">
-                                <img src="images/JettanaImg.gif" alt="Jettana Luangsa-ard" class="w-36 h-36 sm:w-40 sm:h-40 object-cover border-2 border-brand-volt avatar-glow bg-slate-900">
+                                <!-- เพิ่ม object-top ตรงนี้เพื่อไม่ให้หัวขาด -->
+                                <img src="images/JettanaImg.gif" alt="Jettana Luangsa-ard" class="w-36 h-36 sm:w-40 sm:h-40 object-cover object-top border-2 border-brand-volt avatar-glow bg-slate-900">
                                 <div class="absolute -bottom-2 -right-2 bg-brand-volt text-black text-[10px] font-tech font-extrabold px-2 py-0.5 uppercase">
                                     DEVELOPER
                                 </div>
@@ -150,7 +150,6 @@
                             </div>
                         </div>
 
-                        <!-- Contact & Education Info -->
                         <div class="space-y-4 font-tech text-xs">
                             <div>
                                 <span class="text-brand-subtle block mb-1">// EMAIL</span>
@@ -280,7 +279,8 @@
                     </div>
                 </div>
                 <div class="p-8 pt-0">
-                    <a href="https://github.com/jettanaup7" target="_blank" class="w-full py-3 bg-brand-bg border border-brand-border hover:border-brand-volt text-slate-200 hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                    <!-- ใส่ลิงก์ Repository ของโปรเจกต์ Slide Me ใน href -->
+                    <a href="https://github.com/jettanaup7/slide-me" target="_blank" class="w-full py-3 bg-brand-bg border border-brand-border hover:border-brand-volt text-slate-200 hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
                         <i class="fa-brands fa-github text-sm"></i> VIEW SOURCE CODE
                     </a>
                 </div>
@@ -313,7 +313,8 @@
                     </div>
                 </div>
                 <div class="p-8 pt-0">
-                    <a href="https://github.com/jettanaup7" target="_blank" class="w-full py-3 bg-brand-bg border border-brand-border hover:border-brand-volt text-slate-200 hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                    <!-- ใส่ลิงก์ Repository ของโปรเจกต์ Aquabot ใน href -->
+                    <a href="https://github.com/jettanaup7/aquabot" target="_blank" class="w-full py-3 bg-brand-bg border border-brand-border hover:border-brand-volt text-slate-200 hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
                         <i class="fa-brands fa-github text-sm"></i> VIEW SOURCE CODE
                     </a>
                 </div>
@@ -346,7 +347,8 @@
                     </div>
                 </div>
                 <div class="p-8 pt-0">
-                    <a href="https://github.com/jettanaup7" target="_blank" class="w-full py-3 bg-brand-bg border border-brand-border hover:border-brand-volt text-slate-200 hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                    <!-- ใส่ลิงก์ Repository ของโปรเจกต์ POS ใน href -->
+                    <a href="https://github.com/jettanaup7/restaurant-pos" target="_blank" class="w-full py-3 bg-brand-bg border border-brand-border hover:border-brand-volt text-slate-200 hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
                         <i class="fa-brands fa-github text-sm"></i> VIEW SOURCE CODE
                     </a>
                 </div>
@@ -379,7 +381,8 @@
                     </div>
                 </div>
                 <div class="p-8 pt-0">
-                    <a href="https://github.com/jettanaup7" target="_blank" class="w-full py-3 bg-brand-bg border border-brand-border hover:border-brand-volt text-slate-200 hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                    <!-- ใส่ลิงก์ Repository ของโปรเจกต์ Football Queue ใน href -->
+                    <a href="https://github.com/jettanaup7/football-queue" target="_blank" class="w-full py-3 bg-brand-bg border border-brand-border hover:border-brand-volt text-slate-200 hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
                         <i class="fa-brands fa-github text-sm"></i> VIEW SOURCE CODE
                     </a>
                 </div>
@@ -396,7 +399,6 @@
         </div>
 
         <div class="space-y-6">
-            <!-- Experience 1 -->
             <div class="brand-card p-8 border-l-4 border-l-brand-volt flex flex-col md:flex-row justify-between gap-6">
                 <div class="space-y-3">
                     <span class="font-tech text-xs text-brand-volt font-bold">2020 - 2023</span>
@@ -410,7 +412,6 @@
                 </div>
             </div>
 
-            <!-- Experience 2 -->
             <div class="brand-card p-8 border-l-4 border-l-brand-border flex flex-col md:flex-row justify-between gap-6">
                 <div class="space-y-3">
                     <span class="font-tech text-xs text-brand-subtle font-bold">2023</span>
@@ -422,19 +423,17 @@
                 </div>
             </div>
 
-            <!-- Experience 3 -->
             <div class="brand-card p-8 border-l-4 border-l-brand-border flex flex-col md:flex-row justify-between gap-6">
                 <div class="space-y-3">
                     <span class="font-tech text-xs text-brand-subtle font-bold">2024</span>
                     <h3 class="font-tech text-xl font-bold text-white">Fry Cook | KFC</h3>
                     <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
-                        <li>จัดเตรียมและทอดอาหารตามมาตรฐาน ตรวจสอบคุณภาพและความ乾สะอาด</li>
+                        <li>จัดเตรียมและทอดอาหารตามมาตรฐาน ตรวจสอบคุณภาพและความสะอาด</li>
                         <li>ทำงานเป็นทีมและรับมือกับช่วงเวลาที่มีลูกค้าจำนวนมาก</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Experience 4 -->
             <div class="brand-card p-8 border-l-4 border-l-brand-border flex flex-col md:flex-row justify-between gap-6">
                 <div class="space-y-3">
                     <span class="font-tech text-xs text-brand-subtle font-bold">2024 - PRESENT</span>
