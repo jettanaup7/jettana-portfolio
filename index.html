@@ -58,6 +58,9 @@
             transform: translateY(-3px);
             box-shadow: 0 12px 30px -10px rgba(212, 255, 0, 0.12);
         }
+        .avatar-glow {
+            box-shadow: 0 0 25px rgba(212, 255, 0, 0.25);
+        }
     </style>
 </head>
 <body class="editorial-grid min-h-screen antialiased selection:bg-brand-volt selection:text-black">
@@ -83,7 +86,7 @@
                 <a href="https://www.linkedin.com/in/jettana-luangsa-ard-ba1542435/" target="_blank" class="w-9 h-9 border border-brand-border flex items-center justify-center hover:border-brand-volt hover:text-brand-volt transition-all">
                     <i class="fa-brands fa-linkedin-in text-base"></i>
                 </a>
-                <a href="resume.pdf" download class="hidden sm:inline-flex px-4 py-2 bg-brand-volt text-black font-tech font-bold text-xs uppercase tracking-wider hover:bg-white transition-all items-center gap-2">
+                <a href="RESUME_JETTANA.pdf" download="RESUME_JETTANA.pdf" class="hidden sm:inline-flex px-4 py-2 bg-brand-volt text-black font-tech font-bold text-xs uppercase tracking-wider hover:bg-white transition-all items-center gap-2">
                     <i class="fa-solid fa-file-pdf"></i> RESUME
                 </a>
             </div>
@@ -94,7 +97,7 @@
     <section id="about" class="pt-36 pb-12 px-6 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
             
-            <div class="lg:col-span-8 flex flex-col justify-between space-y-8">
+            <div class="lg:col-span-7 flex flex-col justify-between space-y-8">
                 <div class="space-y-6">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-card border border-brand-border font-tech text-xs text-brand-volt uppercase font-bold">
                         <span class="w-2 h-2 bg-brand-flame"></span> JUNIOR FULL-STACK DEVELOPER
@@ -112,7 +115,7 @@
                 </div>
 
                 <div class="flex flex-wrap gap-3 pt-2">
-                    <a href="resume.pdf" download class="px-6 py-3.5 bg-brand-volt text-black font-tech font-bold text-xs uppercase tracking-widest hover:bg-white transition-all flex items-center gap-2">
+                    <a href="RESUME_JETTANA.pdf" download="RESUME_JETTANA.pdf" class="px-6 py-3.5 bg-brand-volt text-black font-tech font-bold text-xs uppercase tracking-widest hover:bg-white transition-all flex items-center gap-2">
                         <i class="fa-solid fa-download"></i> DOWNLOAD RESUME (PDF)
                     </a>
                     <a href="https://github.com/jettanaup7" target="_blank" class="px-5 py-3.5 border border-brand-border text-white font-tech font-bold text-xs uppercase tracking-widest hover:border-brand-volt hover:text-brand-volt transition-all flex items-center gap-2">
@@ -124,19 +127,31 @@
                 </div>
             </div>
 
-            <!-- Profile Overview Card -->
-            <div class="lg:col-span-4">
+            <!-- Profile Overview Card (Large & Clear Profile Photo) -->
+            <div class="lg:col-span-5">
                 <div class="brand-card p-8 rounded-none h-full flex flex-col justify-between border-l-4 border-l-brand-volt">
                     <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <img src="images/JettanaImg.gif" alt="Jettana Luangsa-ard" class="w-16 h-16 object-cover border-2 border-brand-volt">
-                            <div>
-                                <h3 class="font-bold text-white text-lg">เจตนะ เหลืองสอาด (อัพ)</h3>
-                                <p class="text-xs text-brand-volt font-tech">Age: 22 | Thai Nationality</p>
+                        <!-- Profile Image Section -->
+                        <div class="flex flex-col sm:flex-row items-center gap-6 pb-6 border-b border-brand-border">
+                            <div class="relative group">
+                                <img src="images/JettanaImg.gif" alt="Jettana Luangsa-ard" class="w-36 h-36 sm:w-40 sm:h-40 object-cover border-2 border-brand-volt avatar-glow bg-slate-900">
+                                <div class="absolute -bottom-2 -right-2 bg-brand-volt text-black text-[10px] font-tech font-extrabold px-2 py-0.5 uppercase">
+                                    DEVELOPER
+                                </div>
+                            </div>
+                            <div class="text-center sm:text-left space-y-1">
+                                <h3 class="font-bold text-white text-xl">เจตนะ เหลืองสอาด</h3>
+                                <p class="text-brand-volt font-tech text-sm font-semibold">ชื่อเล่น: อัพ (Up)</p>
+                                <p class="text-xs text-brand-subtle font-tech">อายุ 22 ปี | สัญชาติไทย</p>
+                                <div class="pt-2 flex justify-center sm:justify-start gap-2">
+                                    <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[11px] text-slate-300">TH (Native)</span>
+                                    <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[11px] text-slate-300">EN</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="space-y-4 font-tech text-xs border-t border-brand-border pt-6">
+                        <!-- Contact & Education Info -->
+                        <div class="space-y-4 font-tech text-xs">
                             <div>
                                 <span class="text-brand-subtle block mb-1">// EMAIL</span>
                                 <a href="mailto:jettana.lua@spumail.net" class="text-white hover:text-brand-volt transition-colors font-bold text-sm block">
@@ -151,15 +166,18 @@
                             </div>
                             <div>
                                 <span class="text-brand-subtle block mb-1">// EDUCATION</span>
-                                <span class="text-white font-bold text-sm block">มหาวิทยาลัยศรีปทุม</span>
-                                <span class="text-slate-400">วิทยาการคอมพิวเตอร์และนวัตกรรมการพัฒนาซอฟต์แวร์</span>
+                                <div class="space-y-2">
+                                    <div>
+                                        <span class="text-white font-bold text-sm block">มหาวิทยาลัยศรีปทุม</span>
+                                        <span class="text-slate-400 block">วิทยาการคอมพิวเตอร์และนวัตกรรมการพัฒนาซอฟต์แวร์</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-white font-bold text-sm block">วิทยาลัยอาชีวศึกษากาญจนบุรี</span>
+                                        <span class="text-slate-400 block">เทคโนโลยีสารสนเทศ</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="pt-6 border-t border-brand-border font-tech text-xs flex justify-between items-center">
-                        <span class="text-brand-subtle">LANGUAGES</span>
-                        <span class="text-white font-bold">Thai (Native) / English</span>
                     </div>
                 </div>
             </div>
@@ -250,7 +268,7 @@
                             Slide Me - Tow Truck Service Application
                         </h3>
                         <p class="text-brand-subtle text-sm leading-relaxed">
-                            ออกแบบแนวคิดระบบเรียกรถลาก/รถยกฉุกเฉิน วิเคราะห์ Pain Points ผู้ใช้ ออกแบบ User Flow สำหรับการเรียกรถ ติดตามสถานะงาน และแนวทางการชำระเงิน
+                            ออกแบบแนวคิดระบบเรียกรถลาก/รถยกผ่านแอปพลิเคชัน วิเคราะห์ Pain Points ความต้องการของผู้ใช้ ออกแบบ User Flow สำหรับการเรียกรถ ติดตามสถานะงาน และระบบชำระเงิน
                         </p>
 
                         <div class="flex flex-wrap gap-2 pt-2">
@@ -283,7 +301,7 @@
                             Aquabot - Aquaculture AI Chatbot
                         </h3>
                         <p class="text-brand-subtle text-sm leading-relaxed">
-                            แชทบอต AI ช่วยเหลือเกษตรกรผู้เลี้ยงสัตว์น้ำ พัฒนาด้วยสถาปัตยกรรม RAG ร่วมกับ LLM เพื่อดึงข้อมูลสถิติและเทคนิคการเลี้ยงเฉพาะทางจากไฟล์ข้อมูล ดำเนินการ Prompt Engineering เพื่อความแม่นยำ
+                            แชทบอต AI ช่วยเหลือเกษตรกรผู้เลี้ยงสัตว์น้ำ พัฒนาด้วยสถาปัตยกรรม RAG ร่วมกับ LLM เพื่อดึงข้อมูลสถิติและเทคนิคการเลี้ยงปลาเฉพาะทาง (ปลานิล/ปลาดุก) จากไฟล์ CSV พร้อมปรับแต่ง Prompt Engineering
                         </p>
 
                         <div class="flex flex-wrap gap-2 pt-2">
@@ -316,7 +334,7 @@
                             QR Code Restaurant Ordering & POS System
                         </h3>
                         <p class="text-brand-subtle text-sm leading-relaxed">
-                            ระบบสั่งอาหารผ่านการสแกน QR Code ประจำโต๊ะ ออกแบบ RESTful API สำหรับจัดการเมนูและคำสั่งซื้อ แยกออเดอร์ตามแผนกครัว (ราเมง/อาหารทอด) พร้อมส่งสถานะ Real-time ผ่าน Socket.IO
+                            ระบบสั่งอาหารผ่านการสแกน QR Code ประจำโต๊ะ ออกแบบ RESTful API จัดการข้อมูลออเดอร์ แยกประเภทตามส่วนงานครัว (ราเมง/อาหารทอด) และส่งสถานะ Real-time ด้วย Socket.IO
                         </p>
 
                         <div class="flex flex-wrap gap-2 pt-2">
@@ -346,10 +364,10 @@
 
                     <div class="p-8 space-y-4">
                         <h3 class="font-tech text-2xl font-bold text-white group-hover:text-brand-volt transition-colors">
-                            Football Queue Management System (Torteam)
+                            Football Queue Management System
                         </h3>
                         <p class="text-brand-subtle text-sm leading-relaxed">
-                            ระบบจัดการคิวและลงทะเบียนทีมฟุตบอล ออกแบบ Split-screen UI แสดงสถานะหลายแมตช์ พร้อมระบบจับเวลา Real-time และ QR Code สแกนเข้าชมสำหรับผู้ชม
+                            ระบบจัดการคิวและลงทะเบียนทีมฟุตบอลการแข่งขันภายในมหาวิทยาลัย UI แบบ Split-screen แสดงผลหลายแมตช์ มีระบบจับเวลา Real-time และสแกน QR Code สำหรับผู้ชมเข้าถึงข้อมูล
                         </p>
 
                         <div class="flex flex-wrap gap-2 pt-2">
@@ -378,6 +396,7 @@
         </div>
 
         <div class="space-y-6">
+            <!-- Experience 1 -->
             <div class="brand-card p-8 border-l-4 border-l-brand-volt flex flex-col md:flex-row justify-between gap-6">
                 <div class="space-y-3">
                     <span class="font-tech text-xs text-brand-volt font-bold">2020 - 2023</span>
@@ -386,17 +405,44 @@
                         <li>ออกแบบป้าย ไวนิล Banner สติ๊กเกอร์ และสื่อโฆษณา</li>
                         <li>จัดวาง Layout, Typography และองค์ประกอบภาพให้เหมาะสมกับงานพิมพ์</li>
                         <li>เตรียมไฟล์ Artwork และตรวจสอบรายละเอียดก่อนเข้าสู่กระบวนการผลิตจริง</li>
+                        <li>รับ Brief และปรับแก้งานตามความต้องการของลูกค้า</li>
                     </ul>
                 </div>
             </div>
 
+            <!-- Experience 2 -->
+            <div class="brand-card p-8 border-l-4 border-l-brand-border flex flex-col md:flex-row justify-between gap-6">
+                <div class="space-y-3">
+                    <span class="font-tech text-xs text-brand-subtle font-bold">2023</span>
+                    <h3 class="font-tech text-xl font-bold text-white">Cashier | Lotus's go fresh</h3>
+                    <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
+                        <li>ให้บริการชำระเงินและคิดเงินอย่างถูกต้อง ตรวจสอบรายการสินค้า</li>
+                        <li>ทำงานร่วมกับทีมและรับมือกับช่วงเวลาที่มีลูกค้าจำนวนมากได้อย่างมีประสิทธิภาพ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="brand-card p-8 border-l-4 border-l-brand-border flex flex-col md:flex-row justify-between gap-6">
+                <div class="space-y-3">
+                    <span class="font-tech text-xs text-brand-subtle font-bold">2024</span>
+                    <h3 class="font-tech text-xl font-bold text-white">Fry Cook | KFC</h3>
+                    <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
+                        <li>จัดเตรียมและทอดอาหารตามมาตรฐาน ตรวจสอบคุณภาพและความ乾สะอาด</li>
+                        <li>ทำงานเป็นทีมและรับมือกับช่วงเวลาที่มีลูกค้าจำนวนมาก</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience 4 -->
             <div class="brand-card p-8 border-l-4 border-l-brand-border flex flex-col md:flex-row justify-between gap-6">
                 <div class="space-y-3">
                     <span class="font-tech text-xs text-brand-subtle font-bold">2024 - PRESENT</span>
                     <h3 class="font-tech text-xl font-bold text-white">Service & Kitchen Staff | Silkie Chick Ramen</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        ดูแลการรับออเดอร์ บริการลูกค้า จัดเตรียมหน้าราเมง และปฏิบัติงานในระบบครัวตามมาตรฐานของร้าน
-                    </p>
+                    <ul class="text-slate-300 text-sm space-y-1.5 list-disc list-inside">
+                        <li>รับออเดอร์ ให้บริการลูกค้า ลวกเส้น จัดหน้าราเมง และปฏิบัติงานในครัวตามมาตรฐาน</li>
+                        <li>ดูแลความสะอาด จัดเตรียมและเก็บร้านตามขั้นตอน</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -409,7 +455,7 @@
                 <span class="font-tech text-xs text-brand-volt font-bold tracking-widest uppercase">// CONTACT INFORMATION</span>
                 <h2 class="font-tech text-3xl md:text-5xl font-extrabold text-white">LET'S WORK TOGETHER</h2>
                 <p class="text-brand-subtle text-sm max-w-md mx-auto">
-                    พร้อมรับโอกาสงานตำแหน่ง Junior Full-Stack Developer และ UI Designer สามารถติดต่อพูดคุยรายละเอียดได้เลยครับ
+                    พร้อมรับโอกาสงานตำแหน่ง Junior Full-Stack Developer และ UI Designer ติดต่อพูดคุยรายละเอียดได้เลยครับ
                 </p>
             </div>
 
@@ -420,8 +466,8 @@
                 <a href="tel:0999305125" class="px-6 py-3.5 border border-brand-border text-white hover:border-brand-volt hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-widest transition-all flex items-center gap-2">
                     <i class="fa-solid fa-phone text-sm"></i> 099-9305125
                 </a>
-                <a href="resume.pdf" download class="px-6 py-3.5 border border-brand-border text-white hover:border-brand-volt hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-widest transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-file-pdf text-sm"></i> RESUME (PDF)
+                <a href="RESUME_JETTANA.pdf" download="RESUME_JETTANA.pdf" class="px-6 py-3.5 border border-brand-border text-white hover:border-brand-volt hover:text-brand-volt font-tech font-bold text-xs uppercase tracking-widest transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-file-pdf text-sm"></i> DOWNLOAD RESUME (PDF)
                 </a>
             </div>
 
