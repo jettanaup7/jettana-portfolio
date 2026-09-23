@@ -256,7 +256,7 @@
             <div class="brand-card flex flex-col justify-between group">
                 <div>
                     <div class="aspect-video w-full bg-slate-900 overflow-hidden relative border-b border-brand-border">
-                        <img src="images/Slide Me.png" alt="Slide Me Application" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/Slide Me.png" alt="Slide Me Application" onclick="openImageModal(this.src, this.alt)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
                         <span class="absolute top-4 left-4 px-3 py-1 bg-black text-brand-volt font-tech text-xs font-bold uppercase tracking-wider">
                             SYSTEM ANALYSIS & UX/UI
                         </span>
@@ -290,7 +290,7 @@
             <div class="brand-card flex flex-col justify-between group">
                 <div>
                     <div class="aspect-video w-full bg-slate-900 overflow-hidden relative border-b border-brand-border">
-                        <img src="images/AquaBot.png" alt="Aquabot AI Chatbot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/AquaBot.png" alt="Aquabot AI Chatbot" onclick="openImageModal(this.src, this.alt)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
                         <span class="absolute top-4 left-4 px-3 py-1 bg-black text-brand-volt font-tech text-xs font-bold uppercase tracking-wider">
                             AI / RAG ARCHITECTURE
                         </span>
@@ -324,7 +324,7 @@
             <div class="brand-card flex flex-col justify-between group">
                 <div>
                     <div class="aspect-video w-full bg-slate-900 overflow-hidden relative border-b border-brand-border">
-                        <img src="images/POS.png" alt="QR Code Ordering & POS System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/POS.png" alt="QR Code Ordering & POS System" onclick="openImageModal(this.src, this.alt)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
                         <span class="absolute top-4 left-4 px-3 py-1 bg-black text-brand-volt font-tech text-xs font-bold uppercase tracking-wider">
                             FULL-STACK / POS
                         </span>
@@ -358,7 +358,7 @@
             <div class="brand-card flex flex-col justify-between group">
                 <div>
                     <div class="aspect-video w-full bg-slate-900 overflow-hidden relative border-b border-brand-border">
-                        <img src="images/Torteam (2).png" alt="Football Queue Management System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="images/Torteam (2).png" alt="Football Queue Management System" onclick="openImageModal(this.src, this.alt)" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-zoom-in">
                         <span class="absolute top-4 left-4 px-3 py-1 bg-black text-brand-volt font-tech text-xs font-bold uppercase tracking-wider">
                             WEB APPLICATION
                         </span>
@@ -495,5 +495,50 @@
         <p>© 2026 Jettana Luangsa-ard. All rights reserved.</p>
     </footer>
 
+    <!-- Image Lightbox Modal -->
+    <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 transition-all duration-300">
+        <!-- ปุ่มปิด (X) -->
+        <button onclick="closeImageModal()" class="absolute top-6 right-6 text-slate-400 hover:text-brand-volt text-3xl font-bold z-10 transition-colors p-2 focus:outline-none">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- ภาพขนาดใหญ่ -->
+        <div class="relative max-w-6xl max-h-[90vh] w-full flex flex-col items-center justify-center">
+            <img id="modalImage" src="" alt="" class="max-w-full max-h-[82vh] object-contain border border-brand-border shadow-2xl rounded-sm">
+            <p id="modalCaption" class="mt-4 font-tech text-xs sm:text-sm text-brand-volt uppercase tracking-widest text-center font-bold"></p>
+        </div>
+    </div>
+
+    <!-- Script ควบคุมการเปิด-ปิด -->
+    <script>
+        function openImageModal(src, alt) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modalImg.src = src;
+            modalImg.alt = alt || '';
+            modalCaption.textContent = alt || '';
+            
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden'); // ป้องกันการไถหน้าจอขณะเปิดรูป
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // ปิดเมื่อกดปุ่ม ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeImageModal();
+        });
+
+        // ปิดเมื่อคลิกพื้นที่ว่างนอกรูป
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) closeImageModal();
+        });
+    </script>
+</body>
 </body>
 </html>
